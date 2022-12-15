@@ -84,8 +84,10 @@ function recToHTML(moviesList){
 preloadDetail();
 
 loadMovies(videosURL).then(videos => {
-    let start = Math.floor(Math.random() * 10);
-    let finish = Math.floor(Math.random() * 11);
+    let start = Math.floor(Math.random() * 9);
+    let finish = start+3;
+    console.log(start);
+    console.log(finish);
 
     if(finish>=start){
         recToHTML(videos.slice(finish,start));
